@@ -1,0 +1,8 @@
+.navbar {
+  height: 100px;
+}
+
+a.navbar-brand {
+  font-size: 2rem;
+  font-style: bold;
+}

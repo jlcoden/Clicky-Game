@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import Title from "./components/Title";
 import friends from "./friends.json";
 
@@ -54,8 +56,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <header className="App-header">
-          <h1 className="App-title">Walking Dead Clicky Game!</h1>
           <p className="App-intro">
             Click on an image to earn points, but don't click on any more than
             once!
@@ -72,10 +74,8 @@ class App extends Component {
               />
             ))}
           </Wrapper>
-          <footer>
-            <p>Clicky Game!</p>
-          </footer>
         </div>
+        <Footer />
       </div>
     );
   }
