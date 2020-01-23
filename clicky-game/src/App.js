@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-import Navbar from "./components/Navbar";
+import NavbarScore from "./components/NavbarScore";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Title from "./components/Title";
 import friends from "./friends.json";
 
 class App extends Component {
@@ -23,7 +22,7 @@ class App extends Component {
       this.setState({
         clickedFriends: [],
         score: 0,
-        status: "Sorry you lost, Game Over!"
+        status: "Game Over!"
       });
       return;
     } else {
@@ -56,7 +55,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <NavbarScore
+          total={this.state.score}
+          maxScore={12}
+          status={this.state.status}
+        />
         <header className="App-header">
           <p className="App-intro">
             Click on an image to earn points, but don't click on any more than

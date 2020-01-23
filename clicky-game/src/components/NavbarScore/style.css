@@ -1,0 +1,11 @@
+.currentScore {
+  float: right;
+  padding-right: 50px;
+  color: white;
+}
+
+.status {
+  float: right;
+  padding-right: 50px;
+  color: white;
+}
